@@ -144,13 +144,29 @@ img, video {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   align-items: center;
   gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .hero-copy {
-  max-width: 760px;
+  min-width: 0;
+}
+
+.hero-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--bg-soft);
+  box-shadow: var(--shadow);
+}
+
+.hero-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .eyebrow,
@@ -170,7 +186,7 @@ img, video {
 .hero-copy h1 {
   margin: 1rem 0 1rem;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 5vw, 6.1rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   line-height: 0.9;
   letter-spacing: -0.065em;
   font-weight: 600;
